@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Temperature Converter</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="converter-container">
+
+        <!-- Heading -->
+        <div class="header">
+            <div class="temperature-icon">🌡️</div>
+            <h1>Temperature Converter</h1>
+            <p>Convert temperatures easily and quickly</p>
+        </div>
+
+        <form id="converterForm">
+
+            <!-- Temperature Input -->
+            <div class="input-section">
+
+                <label for="temperature">
+                    Enter Temperature
+                </label>
+
+                <input
+                    type="text"
+                    id="temperature"
+                    placeholder="Enter temperature value"
+                    value="0"
+                    inputmode="decimal"
+                    autocomplete="off"
+                >
+
+            </div>
+
+            <!-- Unit Selection -->
+            <div class="unit-section">
+
+                <p class="section-title">
+                    Select Input Unit
+                </p>
+
+                <div class="unit-options">
+
+                    <label class="unit-option">
+                        <input
+                            type="radio"
+                            name="unit"
+                            value="celsius"
+                            checked
+                        >
+                        <span>Celsius (°C)</span>
+                    </label>
+
+                    <label class="unit-option">
+                        <input
+                            type="radio"
+                            name="unit"
+                            value="fahrenheit"
+                        >
+                        <span>Fahrenheit (°F)</span>
+                    </label>
+
+                    <label class="unit-option">
+                        <input
+                            type="radio"
+                            name="unit"
+                            value="kelvin"
+                        >
+                        <span>Kelvin (K)</span>
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- Convert Button -->
+            <button type="submit" id="convertBtn">
+                Convert Temperature
+            </button>
+
+            <!-- Error Message -->
+            <p id="errorMessage" class="error-message"
+               role="alert"></p>
+
+        </form>
+
+        <!-- Results -->
+        <div class="result-box">
+
+            <h2>Conversion Results</h2>
+
+            <div class="result-item">
+                <span class="result-label">Celsius</span>
+                <span class="result-value" id="celsius">—</span>
+            </div>
+
+            <div class="result-item">
+                <span class="result-label">Fahrenheit</span>
+                <span class="result-value" id="fahrenheit">—</span>
+            </div>
+
+            <div class="result-item">
+                <span class="result-label">Kelvin</span>
+                <span class="result-value" id="kelvin">—</span>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Designed with ❤️ | Temperature Converter</p>
+        </div>
+
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

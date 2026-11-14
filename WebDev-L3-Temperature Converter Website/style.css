@@ -1,0 +1,358 @@
+
+/* ==============================
+   GENERAL STYLING
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #101D35,
+        #162D49,
+        #0B3546
+    );
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+}
+
+/* ==============================
+   MAIN CONTAINER
+============================== */
+
+.converter-container {
+    background: #172943;
+
+    width: 100%;
+    max-width: 480px;
+
+    padding: 35px 40px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 45px rgba(0,0,0,0.35);
+
+    animation: appear 0.7s ease;
+}
+
+/* Card Animation */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ==============================
+   HEADER
+============================== */
+
+.header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.temperature-icon {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #19C6B4;
+
+    font-size: 29px;
+
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #AABBD0;
+
+    font-size: 14px;
+}
+
+/* ==============================
+   INPUT SECTION
+============================== */
+
+.input-section {
+    margin-bottom: 25px;
+}
+
+.input-section label {
+    display: block;
+
+    color: #E5EDF7;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+#temperature {
+    width: 100%;
+
+    padding: 14px;
+
+    background: #0F2038;
+
+    color: white;
+
+    border: 1px solid #38516D;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+#temperature:focus {
+    border-color: #19C6B4;
+
+    box-shadow: 0 0 8px rgba(25,198,180,0.3);
+}
+
+/* ==============================
+   UNIT SELECTION
+============================== */
+
+.unit-section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    color: #E5EDF7;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-bottom: 16px;
+}
+
+.unit-options {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.unit-option {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px;
+
+    background: #0F2038;
+
+    border: 1px solid #29445F;
+
+    border-radius: 9px;
+
+    color: #D4E0EF;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.unit-option:hover {
+    border-color: #19C6B4;
+
+    background: #19344C;
+}
+
+.unit-option input {
+    width: 17px;
+    height: 17px;
+
+    accent-color: #19C6B4;
+
+    cursor: pointer;
+}
+
+.unit-option:has(input:checked) {
+    border-color: #19C6B4;
+
+    background: #193B4A;
+}
+
+/* ==============================
+   CONVERT BUTTON
+============================== */
+
+button {
+    width: 100%;
+
+    padding: 15px;
+
+    background: linear-gradient(
+        90deg,
+        #19C6B4,
+        #0EA5B7
+    );
+
+    color: #102334;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0EA5B7;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(25,198,180,0.25);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* ==============================
+   ERROR MESSAGE
+============================== */
+
+.error-message {
+    color: #FF8585;
+
+    font-size: 14px;
+
+    margin-top: 12px;
+
+    line-height: 1.5;
+}
+
+/* ==============================
+   RESULT SECTION
+============================== */
+
+.result-box {
+    background: #0F2038;
+
+    border: 1px solid #29445F;
+
+    padding: 20px;
+
+    margin-top: 30px;
+
+    border-radius: 12px;
+}
+
+.result-box h2 {
+    color: #19C6B4;
+
+    font-size: 19px;
+
+    margin-bottom: 18px;
+}
+
+.result-item {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #29445F;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    color: #D4E0EF;
+
+    font-size: 15px;
+}
+
+.result-value {
+    color: #19C6B4;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer {
+    text-align: center;
+
+    margin-top: 25px;
+}
+
+.footer p {
+    color: #8296AE;
+
+    font-size: 12px;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .converter-container {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .result-item {
+        gap: 10px;
+    }
+
+}
